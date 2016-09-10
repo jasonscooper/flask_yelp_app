@@ -10,17 +10,21 @@
 			<div class="container">
 				{% if businesses %}
 					<h1>Great restaurants in your area!</h1>
-						<ul>
+						<ol>
 						{% for business in businesses %}
 							<li>{{ business.name }}</li>
+								<ul>
+									<li><strong>Rating:</strong> {{ business.rating}}</li>
+									<li><strong>Phone:</strong> {{business.phone}}</li>
+								</ul>
 						{% endfor %}
-						</ul>
+						</ol>
 					<p><a href="{{ url_for('index')}}">Look up another address</a></p>
 				{% else %}
 					<h1>Hello, Where do you live?</h1>
 					<form action="/" class="form-inline">
 						<div class="form-group">
-							<input type="text" name="address" placeholder="Zip Code" class="form-control">
+							<input type="text" name="address" placeholder="Address or City, St or Zip Code" class="form-control">
 							<input type="submit" name="Submit" class="btn btn-primary">
 						</div>
 					</form>
