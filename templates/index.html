@@ -12,7 +12,7 @@
 					<h1>Great restaurants in your area!</h1>
 						<ol>
 						{% for business in businesses %}
-							<li class="bg-info">{{ business.name }} is rated {{ business.rating}}</li>
+							<li>{{ business.name }} is rated {{ business.rating}}</li>
 								<ul>
 									<li><strong>Address:</strong> {{ business.address[0] }}, {{ business.address[1] }} {{ business.address[2] }}</li>
 									<li><strong>Phone:</strong> {{business.phone }}</li>
