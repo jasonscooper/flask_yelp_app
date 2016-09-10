@@ -32,7 +32,8 @@ def print_businesses(term, location):
 		# print(business.name)
 		businesses.append({"name": business.name, 
 			"rating": business.rating, 
-			"phone": business.phone
+			"phone": business.phone,
+			"address": business.address
 		})
 
 	return businesses
