@@ -12,20 +12,20 @@
 					<h1>Great restaurants in your area!</h1>
 						<ol>
 						{% for business in businesses %}
-							<li>{{ business.name }}</li>
+							<li>{{ business.name }} is rated {{ business.rating}}</li>
 								<ul>
-									<li><strong>Rating:</strong> {{ business.rating}}</li>
+									<li><strong>Address:</strong> {{ business.address}}</li>
 									<li><strong>Phone:</strong> {{business.phone}}</li>
 								</ul>
 						{% endfor %}
 						</ol>
 					<p><a href="{{ url_for('index')}}">Look up another address</a></p>
 				{% else %}
-					<h1>Hello, Where do you live?</h1>
+					<h1>Tell me where you're at and I'll recommend some restaurants.</h1>
 					<form action="/" class="form-inline">
 						<div class="form-group">
-							<input type="text" name="address" placeholder="Address or City, St or Zip Code" class="form-control">
-							<input type="submit" name="Submit" class="btn btn-primary">
+							<input type="text" name="address" placeholder="Address or City, St or Zip" class="form-control">
+							<input type="submit" name="Let's Eat" class="btn btn-primary">
 						</div>
 					</form>
 				{% endif %}
