@@ -14,7 +14,7 @@
 						{% for business in businesses %}
 							<li>{{ business.name }} is rated {{ business.rating}}</li>
 								<ul>
-									<li><strong>Address:</strong> {{ business.address[0] }}</li>
+									<li><strong>Address:</strong> {{ business.address[0] }}, {{ business.address[1] }} {{ business.address[2] }}</li>
 									<li><strong>Phone:</strong> {{business.phone }}</li>
 								</ul>
 						{% endfor %}
